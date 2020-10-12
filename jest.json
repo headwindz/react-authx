@@ -1,0 +1,15 @@
+{
+  "transform": {
+    "^.+\\.(t|j)sx?$": "ts-jest"
+  },
+  "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+  "testURL": "http://localhost/",
+  "moduleNameMapper": {
+    "@src/(.*)": "<rootDir>/src/$1",
+    "@src": "<rootDir>/src"
+  },
+  "collectCoverage": true,
+  "coverageReporters": ["json", "html"],
+  "setupFiles": ["./jest.setup.ts"]
+}
