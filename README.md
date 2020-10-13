@@ -36,68 +36,57 @@
 
 ## Example
 
-### AuthList
-
-```javascript
-const authList = ['user-edit', 'user-list', 'user-enable,user-disable']
-```
-
 ### Provider
 
-```javascript
+```jsx
 import React from 'react'
 import { AuthProvider } from 'react-authx'
 
-class App extends React.Component {
-  render() {
-    return (
-      <AuthProvider value={{ authList }}>
-        ...
-      </AuthProvider>
-    )
-  }
+const authList = ['user-edit', 'user-list', 'user-enable,user-disable']
+const App = () => {
+  return (
+    <AuthProvider value={{ authList }}>
+      ...
+    </AuthProvider>
+  )
 }
 ```
 
 ### Consumer
 
-```javascript
+```jsx
 import React from 'react'
 import { AuthConsumer } from 'react-authx'
 
-class Component extends React.Component {
-  render () {
-    return (
-      <AuthConsumer authKey="user-edit">
-        <div> shown when has auth for key: user-edit</div>
-      </AuthConsumer>
+const Component = () => {
+  return (
+    <AuthConsumer authKey="user-edit">
+      <div> shown when has auth for key: user-edit</div>
+    </AuthConsumer>
 
-      <AuthConsumer authKey="user-list">
-      {
-        hasAuth => (
-        hasAuth
-          ? <div> shown when has auth for key: user-list </div>
-          : <div> shown when does not have auth for key: user-list </div>
-        }
-        )
+    <AuthConsumer authKey="user-list">
+    {
+      hasAuth => (
+      hasAuth
+        ? <div> shown when has auth for key: user-list </div>
+        : <div> shown when does not have auth for key: user-list </div>
       }
-      </AuthConsumer>
-    )
-  }
+      )
+    }
+    </AuthConsumer>
+  )
 }
 ```
 
 ### AuthWrapper
 
-```javascript
+```jsx
 import React from 'react'
 import { AuthWrapper, hasAuth } from 'react-authx'
 import { Input } from 'antd'
 
 @AuthWrapper
-class Component extends React.Component {
-  render() {
-    return <Input disable={hasAuth(this.props.authList, 'user-enable,user-disable')} />
-  }
+const Component = (props) => {
+  return <Input disable={hasAuth(props.authList, 'user-enable,user-disable')} />
 }
 ```
