@@ -28,6 +28,11 @@
 
 - hasAuth
 
+  (authList: string, authKey: string) => boolean
+
+- setCustomeValidator
+
+  (authList, authKey, otherProps: T) => boolean
 
 ## Example
 
