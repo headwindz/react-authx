@@ -1,6 +1,6 @@
 {
   "name": "react-authx",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "react authorized",
   "main": "dist/index.js",
   "module": "dist/index.js",
