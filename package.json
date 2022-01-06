@@ -27,18 +27,20 @@
     ]
   },
   "dependencies": {
-    "react": "^16.12.0 || ^17.0.0"
+    "ramda": "^0.27.1",
+    "react": "^17.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
+    "@types/ramda": "^0.27.62",
+    "@types/react": "^17.0.38",
     "@umijs/fabric": "^2.8.1",
     "@umijs/test": "^3.0.5",
     "dumi": "^1.1.0",
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
-    "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
     "yorkie": "^2.0.0"
   }

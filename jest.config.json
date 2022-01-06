@@ -1,0 +1,15 @@
+{
+  "preset": "ts-jest",
+  "transform": {
+    "^.+\\.(t|j)sx?$": "ts-jest"
+  },
+  "testRegex": "__tests__/.*\\.(jsx?|tsx?)$",
+  "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
+  "testURL": "http://localhost/",
+  "moduleNameMapper": {
+    "react-authx/(.*)": "<rootDir>/src/$1",
+    "react-authx": "<rootDir>/src"
+  },
+  "collectCoverage": true,
+  "coverageReporters": ["json", "html"]
+}
