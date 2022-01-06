@@ -1,24 +1,13 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "sourceMap": true,
-    "declaration": true,
+    "target": "esnext",
     "module": "esnext",
-    "target": "es5",
-    "skipLibCheck": true,
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true,
-    "esModuleInterop": true,
     "moduleResolution": "node",
-    "lib": ["dom", "esnext"],
     "jsx": "react",
-    "noImplicitAny": true,
-    "removeComments": true,
-    "baseUrl": ".",
-    "paths": {
-      "react-authx": ["src/"]
-    }
-  },
-  "include": ["src/**/*", "__tests__/**/*"],
-  "exclude": ["node_modules"]
+    "esModuleInterop": true,
+    "types": ["jest"],
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true
+  }
 }
